@@ -5,4 +5,10 @@ describe('------ User model tests ------', () => {
     beforeAll(async () => {
         await db.sync({force: true});
     });
+
+    it('can create a User', async () => {
+        const newUser = await User.create(users[1]);
+        expect(newUser.name).toBe('Bea O-Problem');
+        expect(newUser.email).toBe('bea@email.com');
+    });
 });
