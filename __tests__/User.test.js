@@ -1,0 +1,1 @@
+const { db, User } = require('../server/models/index.js');
